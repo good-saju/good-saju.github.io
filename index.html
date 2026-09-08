@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>사주구조대 | 나 퇴사해도 돼?</title>
+<title>사주구조대 | 무료 사주</title>
 <meta name="description" content="어려운 말 없이 알아듣는 말로만 알려주는 무료 사주 - 사주구조대">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="사주구조대">
-<meta property="og:title" content="사주구조대 | 나 퇴사해도 돼?">
+<meta property="og:title" content="사주구조대 | 무료 사주">
 <meta property="og:description" content="어려운 말 없이 알아듣는 말로만 알려주는 무료 사주. 가입도 결제도 없음.">
 <meta property="og:url" content="https://good-saju.github.io/">
 <meta property="og:image" content="https://good-saju.github.io/og.png">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="사주구조대 | 나 퇴사해도 돼?">
+<meta name="twitter:title" content="사주구조대 | 무료 사주">
 <meta name="twitter:description" content="어려운 말 없이 알아듣는 말로만 알려주는 무료 사주">
 <meta name="twitter:image" content="https://good-saju.github.io/og.png">
 
@@ -22,9 +22,7 @@
 <meta name="theme-color" content="#14110f">
 
 <script src="https://cdn.jsdelivr.net/npm/lunar-javascript@1.7.3/lunar.js"></script>
-
 <style>
-
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#14110f;color:#f2ede7;line-height:1.75;
   font-family:-apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕',sans-serif;
@@ -42,7 +40,6 @@ button:active{background:#c53f2c}
 .row{display:flex;gap:9px}
 .note{font-size:12px;color:#6b615a;margin-top:10px;line-height:1.6}
 .card{background:#1e1a17;border:1px solid #3a332e;border-radius:14px;padding:20px;margin-top:13px}
-.hero{background:linear-gradient(160deg,#2a1c18,#1e1a17)}
 .badge{font-size:12px;color:#e8503a;font-weight:700;letter-spacing:.5px}
 .big{font-size:24px;font-weight:800;letter-spacing:-1.2px;line-height:1.4;margin:9px 0 6px}
 .quote{font-size:21px;font-weight:800;letter-spacing:-1px;color:#ffd9a0;line-height:1.5}
@@ -51,7 +48,6 @@ h2{font-size:14px;color:#e8503a;margin-bottom:9px;letter-spacing:-.3px}
 p{font-size:15.5px;letter-spacing:-.3px}
 .bar{display:flex;align-items:center;gap:9px;margin:6px 0;font-size:13px;color:#c9c0b8}
 .bar i{font-style:normal;width:34px;flex:none;white-space:nowrap;color:#9b918a}
-
 .bar em{font-style:normal;height:10px;background:#e8503a;border-radius:5px;display:block;min-width:3px}
 .bar em.zero{background:#3a332e}
 .act{background:#2a2320;border-left:3px solid #e8503a;padding:11px 13px;
@@ -71,7 +67,6 @@ td{font-size:17px;letter-spacing:1px}
 .leap{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:13.5px;color:#9b918a}
 .leap input{width:17px;height:17px;padding:0;margin:0;accent-color:#e8503a}
 .err{color:#ff8a70;font-size:13.5px;margin-top:12px}
-
 .shot{position:relative;aspect-ratio:1/1;display:flex;flex-direction:column;
   justify-content:center;align-items:center;text-align:center;
   background:linear-gradient(160deg,#2f1e19,#1e1a17);
@@ -79,17 +74,22 @@ td{font-size:17px;letter-spacing:1px}
 .shot .sbrand{font-size:12px;color:#e8503a;font-weight:700;letter-spacing:2px;margin-bottom:16px}
 .shot .big{font-size:26px;margin:0 0 14px}
 .shot .quote{font-size:19px}
+.shot .date{font-size:13px;color:#9b918a;margin-bottom:14px}
 .shot .url{position:absolute;left:0;right:0;bottom:16px;font-size:11px;color:#6b615a;letter-spacing:.5px}
 .shotnote{font-size:12.5px;color:#6b615a;text-align:center;margin-top:10px;line-height:1.6}
-
+.xlink{display:block;text-align:center;margin-top:22px;font-size:14.5px;
+  color:#ffd9a0;text-decoration:none;border:1px solid #3a332e;
+  border-radius:10px;padding:14px;background:#1a1714}
+.saved{font-size:13px;color:#6b615a;text-align:center;margin-top:14px}
+.saved a{color:#9b918a}
 </style>
 </head>
 <body>
 
 <div id="form">
   <div class="brand">사주구조대</div>
-  <h1>나 퇴사해도 돼?</h1>
-  <p class="sub">네 사주가 회사 다닐 팔자인지 알려준다.<br>어려운 말 없이, 알아듣는 말로만.</p>
+  <h1 id="ttl">무료 사주</h1>
+  <p class="sub" id="hook">타고난 성향, 돈 버는 방식, 자주 하는 실수.<br>어려운 말 없이, 알아듣는 말로만.</p>
 
   <label>생년월일</label>
   <div class="seg">
@@ -108,33 +108,20 @@ td{font-size:17px;letter-spacing:1px}
   <label>태어난 시간</label>
   <select id="h"><option value="">모름 (선택 안 해도 됨)</option></select>
 
-  <button onclick="go()">무료 사주보기</button>
+  <button id="btn" onclick="go()">무료 사주보기</button>
   <div id="err"></div>
   <p class="note">가입 없음 · 결제 없음 · 입력값은 저장되지 않고 이 기기에서만 계산됩니다.</p>
+  <div id="savedBox"></div>
 </div>
 
 <div id="result" class="hide"></div>
 
 <script>
-/* ===== 진입점 설정 ===== */
-var ENTRY={
-  retire:{title:'나 퇴사해도 돼?',
-    hook:'네 사주가 회사 다닐 팔자인지 알려준다.<br>어려운 말 없이, 알아듣는 말로만.',
-    order:['trait','money','mistake']},
-  today:{title:'오늘 되는 날이야?',
-    hook:'오늘 뭘 밀어붙여도 되는 날인지 알려준다.<br>매일 바뀌니까 내일 또 봐라.',
-    order:['daily','trait','mistake']},
-  money:{title:'나 언제 돈 벌어?',
-    hook:'네가 돈 버는 방식과 새는 구멍을 알려준다.<br>어려운 말 없이, 알아듣는 말로만.',
-    order:['money','mistake','trait']}
-};
-var q=location.search.replace('?','').split('&')[0];
-var E=ENTRY[q]||ENTRY.retire;
-document.title='사주구조대 | '+E.title;
+/* ===== 모드 ===== */
+var MODE = (location.search.indexOf('today')>=0) ? 'today' : 'saju';
 
 /* ===== 계산 엔진 ===== */
 var STEMS=['甲','乙','丙','丁','戊','己','庚','辛','壬','癸'];
-
 var BRANCHES=['子','丑','寅','卯','辰','巳','午','未','申','酉','戌','亥'];
 var TERMS=[[1,6,'丑'],[2,4,'寅'],[3,6,'卯'],[4,5,'辰'],[5,6,'巳'],[6,6,'午'],
 [7,7,'未'],[8,8,'申'],[9,8,'酉'],[10,8,'戌'],[11,7,'亥'],[12,7,'子']];
@@ -149,20 +136,18 @@ var CTRL={木:'土',土:'水',水:'火',火:'金',金:'木'};
 var CAL='solar';
 function setCal(t){
   CAL=t;
-  document.getElementById('bSol').className = (t==='solar'?'on':'');
-  document.getElementById('bLun').className = (t==='lunar'?'on':'');
-  document.getElementById('leapBox').className = (t==='lunar'?'leap':'leap hide');
-  if(t==='solar') document.getElementById('leap').checked=false;
+  document.getElementById('bSol').className=(t==='solar'?'on':'');
+  document.getElementById('bLun').className=(t==='lunar'?'on':'');
+  document.getElementById('leapBox').className=(t==='lunar'?'leap':'leap hide');
+  if(t==='solar')document.getElementById('leap').checked=false;
 }
 
-/* 음력 → 양력 변환 */
 function lunarToSolar(y,m,d,isLeap){
-  if(typeof Lunar==='undefined') return null;
+  if(typeof Lunar==='undefined')return null;
   try{
-    var lm = isLeap ? -m : m;
-    var s = Lunar.fromYmd(y,lm,d).getSolar();
-    return {y:s.getYear(), m:s.getMonth(), d:s.getDay()};
-  }catch(e){ return null; }
+    var s=Lunar.fromYmd(y,isLeap?-m:m,d).getSolar();
+    return{y:s.getYear(),m:s.getMonth(),d:s.getDay()};
+  }catch(e){return null;}
 }
 
 function getIlju(y,m,d){
@@ -260,20 +245,28 @@ TEXT.daily['정관']={text:'규칙과 평가가 작동하는 날이다. 성실�
 TEXT.daily['편인']={text:'생각이 깊어지는 날이다. 사람보다 혼자가 편하다.',action:'배우거나 읽는 데 시간을 써라'};
 TEXT.daily['정인']={text:'도움이 들어오는 날이다. 물어보면 답이 나온다.',action:'모르는 건 오늘 물어봐라'};
 
-/* ===== 화면 ===== */
-  document.querySelector('h1').innerHTML=E.title;
-document.querySelector('.sub').innerHTML=E.hook;
-
+/* ===== 화면 준비 ===== */
+if(MODE==='today'){
+  document.getElementById('ttl').textContent='오늘의 운세';
+  document.getElementById('hook').innerHTML='오늘 뭘 밀어붙여도 되는 날인지 알려준다.<br>매일 바뀌니까 내일 또 봐라.';
+  document.getElementById('btn').textContent='오늘 운세보기';
+  document.title='사주구조대 | 오늘의 운세';
+}
 var sel=document.getElementById('h');
-
 for(var i=0;i<24;i++){
   var o=document.createElement('option');
-  o.value=i; o.textContent=(i<10?'0':'')+i+'시 무렵';
+  o.value=i;o.textContent=(i<10?'0':'')+i+'시 무렵';
   sel.appendChild(o);
 }
 
+/* ===== 저장 ===== */
+function save(o){try{localStorage.setItem('sgd',JSON.stringify(o));}catch(e){}}
+function load(){try{return JSON.parse(localStorage.getItem('sgd'));}catch(e){return null;}}
+function clearSaved(){try{localStorage.removeItem('sgd');}catch(e){}location.reload();}
+
+/* ===== 실행 ===== */
 function go(){
-  var eb=document.getElementById('err'); eb.innerHTML='';
+  var eb=document.getElementById('err');eb.innerHTML='';
   var y=parseInt(document.getElementById('y').value,10);
   var m=parseInt(document.getElementById('m').value,10);
   var d=parseInt(document.getElementById('d').value,10);
@@ -281,82 +274,101 @@ function go(){
   var h=(hv==='')?null:parseInt(hv,10);
 
   if(!y||!m||!d||y<1900||y>2100||m<1||m>12||d<1||d>31){
-    eb.innerHTML='<p class="err">생년월일을 다시 확인해 주세요.</p>'; return;
+    eb.innerHTML='<p class="err">생년월일을 다시 확인해 주세요.</p>';return;
   }
+  var isLeap=document.getElementById('leap').checked;
+  if(CAL==='lunar'&&!lunarToSolar(y,m,d,isLeap)){
+    eb.innerHTML='<p class="err">그 날짜는 음력에 없는 날이에요. 날짜나 윤달 여부를 확인해 주세요.</p>';return;
+  }
+  save({y:y,m:m,d:d,h:hv,cal:CAL,leap:isLeap});
+  render(y,m,d,h,CAL,isLeap);
+}
 
-  var sy=y, sm=m, sd=d, calNote='';
-  if(CAL==='lunar'){
-    var isLeap=document.getElementById('leap').checked;
+function render(y,m,d,h,cal,isLeap){
+  var sy=y,sm=m,sd=d,calNote='';
+  if(cal==='lunar'){
     var c=lunarToSolar(y,m,d,isLeap);
-    if(!c){
-      eb.innerHTML='<p class="err">그 날짜는 음력에 없는 날이에요. 날짜나 윤달 여부를 확인해 주세요.</p>'; return;
-    }
-    sy=c.y; sm=c.m; sd=c.d;
+    sy=c.y;sm=c.m;sd=c.d;
     calNote='음력 '+y+'.'+m+'.'+d+(isLeap?' (윤달)':'')+' → 양력 '+sy+'.'+sm+'.'+sd;
   }
-
-  var a=analyze(getSaju(sy,sm,sd,h===null?null:h,30));
-  var ig=TEXT.ilgan[a.일간], dm=TEXT.dominant[a.최다], lk=TEXT.lacking[a.최소];
+  var a=analyze(getSaju(sy,sm,sd,h,30));
+  var ig=TEXT.ilgan[a.일간],dm=TEXT.dominant[a.최다],lk=TEXT.lacking[a.최소];
   var n=new Date();
   var todayGan=getIlju(n.getFullYear(),n.getMonth()+1,n.getDate())[0];
-  var rel=sipsin(a.일간,todayGan), dy=TEXT.daily[rel];
-
-  var bars='';
-  ['木','火','土','金','水'].forEach(function(k){
-    var name={木:'나무',火:'불',土:'흙',金:'쇠',水:'물'}[k];
-    var v=a.개수[k];
-    bars+='<div class="bar"><i>'+name+'</i><em class="'+(v===0?'zero':'')+
-      '" style="width:'+(v*30+3)+'px"></em><span>'+v+'</span></div>';
-  });
-
-  var warn='';
-  if(h!==null&&(h===0||h===1||h===23)){
-    warn='<p class="note">밤 11시~새벽 2시 사이 출생은 해석이 갈릴 수 있어요.</p>';
-  }
-  var noTime = (h===null)?'<p class="note">태어난 시간을 몰라 세 기둥으로만 봤어요. 시간을 알면 더 정확해집니다.</p>':'';
+  var dy=TEXT.daily[sipsin(a.일간,todayGan)];
+  var dstr=(n.getMonth()+1)+'월 '+n.getDate()+'일';
 
   document.getElementById('form').className='hide';
   var r=document.getElementById('result');
   r.className='';
-  r.innerHTML=
-'<div class="shot"><div class="sbrand">사주구조대</div>'+
-'<div class="big">'+ig.badge+'</div>'+
-'<div class="quote">"'+ig.oneline+'"</div>'+
-'<div class="url">good-saju.github.io</div></div>'+
-'<p class="shotnote">이 부분만 캡처해서 보내면 됩니다</p>'+
+  var html='';
 
+  if(MODE==='today'){
+    html+='<div class="shot"><div class="sbrand">사주구조대</div>'+
+      '<div class="date">'+dstr+'</div>'+
+      '<div class="quote">'+dy.text+'</div>'+
+      '<div class="url">good-saju.github.io</div></div>'+
+      '<p class="shotnote">이 부분만 캡처해서 보내면 됩니다</p>'+
+      '<div class="card"><h2>오늘 할 일</h2><div class="act">'+dy.action+'</div></div>'+
+      '<div class="card"><h2>참고로 네 유형은</h2>'+
+      '<p><b>'+ig.badge+'</b> — '+ig.oneline+'</p></div>'+
+      '<a class="xlink" href="/">내 타고난 성향 자세히 보기 →</a>';
+  }else{
+    var bars='';
+    ['木','火','土','金','水'].forEach(function(k){
+      var name={木:'나무',火:'불',土:'흙',金:'쇠',水:'물'}[k];
+      var v=a.개수[k];
+      bars+='<div class="bar"><i>'+name+'</i><em class="'+(v===0?'zero':'')+
+        '" style="width:'+(v*30+3)+'px"></em><span>'+v+'</span></div>';
+    });
+    html+='<div class="shot"><div class="sbrand">사주구조대</div>'+
+      '<div class="big">'+ig.badge+'</div>'+
+      '<div class="quote">"'+ig.oneline+'"</div>'+
+      '<div class="url">good-saju.github.io</div></div>'+
+      '<p class="shotnote">이 부분만 캡처해서 보내면 됩니다</p>'+
+      '<div class="card"><h2>타고난 기운</h2>'+bars+
+      (calNote?'<p class="tag" style="margin-top:10px">'+calNote+'</p>':'')+'</div>'+
+      '<div class="card"><h2>타고난 성향</h2><p>'+ig.trait+'</p></div>'+
+      '<div class="card"><h2>돈 버는 방식</h2><p>'+dm.money+'</p></div>'+
+      '<div class="card"><h2>자주 하는 실수</h2><p>'+lk.mistake+'</p></div>'+
+      '<details><summary>내 사주 원문 보기</summary>'+
+      '<table><tr><th>태어난 해</th><th>태어난 달</th><th>태어난 날</th><th>태어난 시</th></tr>'+
+      '<tr><td>'+a.사주.연주+'</td><td>'+a.사주.월주+'</td><td>'+a.사주.일주+'</td><td>'+
+      (a.사주.시주||'—')+'</td></tr></table>'+
+      '<p class="tag" style="margin-top:12px">세 번째 칸 아래 '+a.일간+
+      ' 이 글자가 나를 나타내는 글자입니다. 이걸 기준으로 위 해석이 나왔어요.</p>'+
+      '</details>'+
+      '<a class="xlink" href="/?today">오늘 운세도 보기 →</a>';
+  }
 
-    '<div class="card"><h2>타고난 기운</h2>'+bars+
-    (calNote?'<p class="tag" style="margin-top:10px">'+calNote+'</p>':'')+'</div>'+
-
-(function(){
-  var B={
-    trait:'<div class="card"><h2>타고난 성향</h2><p>'+ig.trait+'</p></div>',
-    money:'<div class="card"><h2>돈 버는 방식</h2><p>'+dm.money+'</p></div>',
-    mistake:'<div class="card"><h2>자주 하는 실수</h2><p>'+lk.mistake+'</p></div>',
-    daily:'<div class="card"><h2>오늘은 어떤 날</h2><p>'+dy.text+
-          '</p><div class="act">'+dy.action+'</div></div>'
-  };
-  var out='';
-  E.order.forEach(function(k){out+=B[k]});
-  ['trait','money','mistake','daily'].forEach(function(k){
-    if(E.order.indexOf(k)<0)out+=B[k];
-  });
-  return out;
-})()+
-
-
-    '<details><summary>내 사주 원문 보기</summary>'+
-    '<table><tr><th>태어난 해</th><th>태어난 달</th><th>태어난 날</th><th>태어난 시</th></tr>'+
-    '<tr><td>'+a.사주.연주+'</td><td>'+a.사주.월주+'</td><td>'+a.사주.일주+'</td><td>'+
-    (a.사주.시주||'—')+'</td></tr></table>'+
-    '<p class="tag" style="margin-top:12px">가운데 아래 '+a.일간+
-    ' 이 글자가 나를 나타내는 글자입니다. 이걸 기준으로 위 해석이 나왔어요.</p>'+
-    '</details>'+
-    warn+noTime+
-    '<button onclick="location.reload()">다시 보기</button>'+
+  if(h!==null&&(h===0||h===1||h===23)){
+    html+='<p class="note">밤 11시~새벽 2시 사이 출생은 해석이 갈릴 수 있어요.</p>';
+  }
+  if(h===null){
+    html+='<p class="note">태어난 시간을 몰라 세 기둥으로만 봤어요. 시간을 알면 더 정확해집니다.</p>';
+  }
+  html+='<button onclick="clearSaved()">생년월일 다시 입력</button>'+
     '<p class="foot">사주구조대 · 재미로 보는 콘텐츠입니다<br>중요한 결정은 스스로 하세요</p>';
+
+  r.innerHTML=html;
   window.scrollTo(0,0);
+}
+
+/* ===== 저장값 자동 실행 ===== */
+(function(){
+  var s=load();
+  if(!s)return;
+  if(MODE==='today'){
+    render(s.y,s.m,s.d,s.h===''?null:parseInt(s.h,10),s.cal,s.leap);
+  }else{
+    document.getElementById('savedBox').innerHTML=
+      '<p class="saved">전에 본 사주가 있어요 · '+
+      '<a href="javascript:void(0)" onclick="reRender()">바로 보기</a></p>';
+  }
+})();
+function reRender(){
+  var s=load();if(!s)return;
+  render(s.y,s.m,s.d,s.h===''?null:parseInt(s.h,10),s.cal,s.leap);
 }
 </script>
 </body>
