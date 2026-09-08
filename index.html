@@ -112,7 +112,9 @@ td{font-size:17px;letter-spacing:1px}
   <div id="err"></div>
   <p class="note">가입 없음 · 결제 없음 · 입력값은 저장되지 않고 이 기기에서만 계산됩니다.</p>
   <div id="savedBox"></div>
+  <a class="xlink" id="xnav" href="/?today">오늘의 운세 보기 →</a>
 </div>
+
 
 <div id="result" class="hide"></div>
 
@@ -251,7 +253,10 @@ if(MODE==='today'){
   document.getElementById('hook').innerHTML='오늘 뭘 밀어붙여도 되는 날인지 알려준다.<br>매일 바뀌니까 내일 또 봐라.';
   document.getElementById('btn').textContent='오늘 운세보기';
   document.title='사주구조대 | 오늘의 운세';
+  document.getElementById('xnav').href='/';
+  document.getElementById('xnav').textContent='무료 사주 보기 →';
 }
+
 var sel=document.getElementById('h');
 for(var i=0;i<24;i++){
   var o=document.createElement('option');
